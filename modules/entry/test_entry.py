@@ -8,7 +8,6 @@ def test_entry_creation_payload(flask_testing_client):
     assert entries['id'] is not None
     assert entries['childrenTags'][0]['traitContentVector'] == [0.0]
     created_entry_id = entries['id']
-    print(created_entry_id)
 
     created_entry = flask_testing_client.get(f'/entry/{created_entry_id}')
     assert created_entry.status_code == 200
