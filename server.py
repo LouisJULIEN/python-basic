@@ -12,6 +12,7 @@ app = Flask(__name__)
 cors = CORS(app, supports_credentials=True)
 
 from modules.health.route import *
+from modules.version.route import *
 from modules.check_payload.route import *
 
 app.config['BUNDLE_ERRORS'] = True

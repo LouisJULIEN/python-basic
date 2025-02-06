@@ -1,24 +1,44 @@
 # Basic Python
 
 A basic Python web server:
+
 - Flask server
 - Payload check with pydantic
-- Docker image
+- PostgresSQL ORM and migration with SQLAchemy and Alembic. Includes pgvector.
+- Ready to build Docker image
+- Basic routes
 
 # Start
-
+## setup
 ```bash
 pip3 install -r requirements.txt
+psql -c 'CREATE DATABASE python_basic'
+alembic upgrade head
+```
+
+# Run
+```bash
 python3 server.py
 ```
 
 # Test
 
 Make sure that your working directory is this repository's root
-
 ```bash
 pytest
 ```
+
+# Postgresql migrations
+Make sure your tables object are imported in [__init__.py](database/orm/__init__.py)
+```bash
+# create new migration file using autogenerate
+alembic revision --autogenerate -m "update XXXXXXXXX"
+
+# migrate
+alembic upgrade head
+```
+# Add route
+Follows [server.py](server.py):14
 
 # Docker
 
