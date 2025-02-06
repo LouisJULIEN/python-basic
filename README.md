@@ -4,7 +4,8 @@ A basic Python web server:
 
 - Flask server
 - Payload check with pydantic
-- PostgresSQL ORM and migration with SQLAchemy and Alembic. Includes pgvector.
+- pytest tests with Flask route testing and monkeypatch example
+- PostgresSQL ORM and migration with SQLAchemy and Alembic. Includes pgvector
 - Ready to build Docker image
 - Basic routes
 
