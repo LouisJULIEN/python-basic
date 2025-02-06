@@ -7,7 +7,7 @@ A basic Python web server:
 - pytest tests with Flask route testing and monkeypatch example
 - PostgresSQL ORM and migration with SQLAchemy and Alembic. Includes pgvector
 - Ready to build Docker image
-- Basic routes
+- Basic routes: healthcheck, version, CRUD example
 
 # Start
 ## setup
@@ -30,16 +30,16 @@ pytest
 ```
 
 # Postgresql migrations
-Make sure your tables object are imported in [__init__.py](database/orm/__init__.py)
+Make sure your tables models are imported in [__init__.py](database/orm/__init__.py)
 ```bash
-# create new migration file using autogenerate
+# Create a new migration file using autogenerate
 alembic revision --autogenerate -m "update XXXXXXXXX"
 
-# migrate
+# Migrate database
 alembic upgrade head
 ```
 # Add route
-Follows [server.py](server.py):14
+Follows [server.py](server.py) at line 14
 
 # Docker
 

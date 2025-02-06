@@ -13,7 +13,7 @@ cors = CORS(app, supports_credentials=True)
 
 from modules.health.route import *
 from modules.version.route import *
-from modules.check_payload.route import *
+from modules.entry.route import *
 
 app.config['BUNDLE_ERRORS'] = True
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024

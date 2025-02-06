@@ -8,4 +8,4 @@ class OtherTable(Base):
 
     id: Mapped[int] = mapped_column(primary_key=True)
 
-    tags = relationship('RecursiveExample', back_populates='recursive_example')
+    tags = relationship('RecursiveExample', back_populates='other_table')
