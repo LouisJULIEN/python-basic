@@ -8,6 +8,6 @@ RUN pip install -r requirements.txt --no-cache-dir
 
 COPY . .
 
-EXPOSE 5000/tcp
-HEALTHCHECK CMD curl --fail http://localhost:5000 || exit 1
+EXPOSE 8000/tcp
+HEALTHCHECK CMD curl --fail http://localhost:8000 || exit 1
 CMD ["python3", "server.py"]
