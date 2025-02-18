@@ -1,3 +1,6 @@
-def test_health(flask_testing_client):
-    res = flask_testing_client.get('/health', json=None)
+from misc.testing_http import fast_api_test_client
+
+
+def test_health():
+    res = fast_api_test_client.get('/health')
     assert res.status_code == 200

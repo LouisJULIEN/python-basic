@@ -1,6 +1,6 @@
 from typing import Type
 
-from flask import abort
+from fastapi import HTTPException
 
 from database.engine import PostgresSession
 from database.orm import RecursiveExample, OtherTable
@@ -10,7 +10,7 @@ def get_or_404_entry(pg_session: PostgresSession, entry_id: int) -> Type[Recursi
     found_entry = pg_session.get(RecursiveExample, entry_id)
 
     if found_entry is None:
-        abort(404)
+        raise HTTPException(status_code=404)
     return found_entry
 
 

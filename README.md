@@ -1,9 +1,8 @@
 # Basic Python
 
 A basic Python web server with the ready-to-use boilerplate:
-- Flask server
-- Payload check with pydantic
-- pytest tests with Flask route testing and monkeypatch example
+- FastAPI server with payload check
+- pytest tests with FastAPI route testing and monkeypatch example
 - PostgresSQL ORM and migration with SQLAchemy and Alembic. Includes pgvector
 - Ready to build Docker image
 - Basic routes: healthcheck, version, CRUD example
