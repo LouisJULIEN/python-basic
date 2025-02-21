@@ -18,7 +18,7 @@ alembic upgrade head
 
 ## Run
 ```bash
-python3 server.py
+fastapi dev server.py
 ```
 
 ## Test

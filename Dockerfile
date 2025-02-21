@@ -10,4 +10,4 @@ COPY . .
 
 EXPOSE 8000/tcp
 HEALTHCHECK CMD curl --fail http://localhost:8000 || exit 1
-CMD ["python3", "server.py"]
+CMD ["fastapi", "run", "server.py"]
