@@ -43,7 +43,7 @@ Follows [server.py](server.py) at line 14
 ## Docker
 
 ```bash
-docker build -t python-basic/build . 
+docker build -t python-basic:build . 
 
-docker run -p 8000:8000 python-basic/build:latest
+docker run -p 8000:8000 python-basic:build
 ```
