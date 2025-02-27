@@ -9,5 +9,5 @@ RUN pip install -r requirements.txt --no-cache-dir
 COPY . .
 
 EXPOSE 8000/tcp
-HEALTHCHECK CMD curl --fail http://localhost:8000 || exit 1
+HEALTHCHECK CMD curl --fail http://localhost:8000/health || exit 1
 CMD ["fastapi", "run", "server.py"]
